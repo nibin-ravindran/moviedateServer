@@ -4,9 +4,12 @@
 name: Maven Package
 
 on:
-  release:
-    types: [created]
-
+  #Manually trigger workflow runs
+  workflow_dispatch:
+  #Trigger the workflow on push from the main branch
+  push:
+    branches:
+      - main
 jobs:
   build:
 
